@@ -1,0 +1,20 @@
+Adds wildlife as a playable faction. This version uses [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2070179271] Neutral Pack mod [/url] for extra units, granting a total of 23 units and 40 research possibilities for the faction.
+
+[h1] Units [/h1]
+
+Besides the original units, some units got buffed for balancing the faction.
+
+[list]
+ [*][b] Neophyte Hybrid Veterans [/b] sports the [i] Snazzgun [/i] from Flash Gitz
+ [*][b] Catachan Devil Queen [/b] buffed to a level of a tank, can carry 2 units, and has a teleport ability to Lairs
+ [*][b] Umbra Warp Fiend [/b] has buffed damage and movement
+ [*][b] Cybernetica Datasmith Biohacker [/b] has infantry healing abilities, but lost its city deploy ability
+ [*][b] Chaos Cultist Conquistador [/b] can deploy new cities, increased upkeep and costs
+[/list]
+
+[h1] City [/h1]
+
+Modded Space Marines city with Food and Ore production instead of Requisitions. Can deploy [i] Wire Weed [/i] for a Food buff or [i] Imperial Ruins [/i] for an Ore buff.
+
+[url=https://github.com/mrnuku/wh40k-gladius-wildlife-faction-plus] Github repo [/url]
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2934500192] Original Wildlife mod [/url]
