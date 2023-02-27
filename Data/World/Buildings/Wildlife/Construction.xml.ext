@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <building>
 	<actions>
-		<constructBuilding building="Wildlife/BotanicalHive"/>
-		<constructBuilding building="Wildlife/StygianStronghold"/>
+		<constructBuilding building="Wildlife/BotanicalHive" requiredUpgrade="Wildlife/BotanicalHive"/>
+		<constructBuilding building="Wildlife/StygianStronghold" requiredUpgrade="Wildlife/StygianStronghold"/>
 	</actions>
 </building>

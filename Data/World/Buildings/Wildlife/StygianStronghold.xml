@@ -34,8 +34,8 @@
 	</strategyModifiers>
 	<actions>
 		<produceUnit unit="Wildlife/Pariah"/>
-		<produceUnit unit="Wildlife/ExaltDryad"/>
-		<produceUnit unit="Wildlife/MagnaDeamonusPyros"/>
-		<produceUnit unit="Wildlife/Horror"/>
+		<produceUnit unit="Wildlife/MagnaDeamonusPyros" requiredUpgrade="Wildlife/MagnaDeamonusPyros"/>
+		<produceUnit unit="Wildlife/ExaltDryad" requiredUpgrade="Wildlife/ExaltDryad"/>
+		<produceUnit unit="Wildlife/Horror" requiredUpgrade="Wildlife/Horror"/>
 	</actions>
 </building>

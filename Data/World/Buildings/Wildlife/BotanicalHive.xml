@@ -34,8 +34,8 @@
 	</strategyModifiers>
 	<actions>
 		<produceUnit unit="Wildlife/OctopodaFacientem"/>
-		<produceUnit unit="Wildlife/DevilSpawn"/>
-		<produceUnit unit="Wildlife/Promethean"/>
-		<produceUnit unit="Wildlife/GiantAudrey"/>
+		<produceUnit unit="Wildlife/DevilSpawn" requiredUpgrade="Wildlife/DevilSpawn"/>
+		<produceUnit unit="Wildlife/Promethean" requiredUpgrade="Wildlife/Promethean"/>
+		<produceUnit unit="Wildlife/GiantAudrey" requiredUpgrade="Wildlife/GiantAudrey"/>
 	</actions>
 </building>

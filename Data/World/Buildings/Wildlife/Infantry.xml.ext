@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <building>
 	<actions>
-		<produceUnit unit="Wildlife/Mutant"/>
+		<produceUnit unit="Wildlife/Mutant" requiredUpgrade="Wildlife/Mutant"/>
 	</actions>
 </building>
