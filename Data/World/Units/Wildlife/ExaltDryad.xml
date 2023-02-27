@@ -53,6 +53,14 @@
 			</effects>
 		</modifier>
 	</modifiers>
+	<strategyModifiers>
+		<modifier>
+			<effects>
+				<increaseInfantryScore base="1.0"/>
+				<increaseSupportScore base="1.0"/>
+			</effects>
+		</modifier>
+	</strategyModifiers>
 	<actions>
 		<attack>
 			<model>

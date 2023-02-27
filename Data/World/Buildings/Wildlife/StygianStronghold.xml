@@ -28,7 +28,8 @@
 	<strategyModifiers>
 		<modifier>
 			<effects>
-				<increaseHeroesProductionScore base="1.0"/>
+				<increaseSupportProductionScore base="1.0"/>
+				<increaseInfantryProductionScore base="1.0"/>
 			</effects>
 		</modifier>
 	</strategyModifiers>
