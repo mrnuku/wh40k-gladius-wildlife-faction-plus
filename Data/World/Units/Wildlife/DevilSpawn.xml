@@ -31,6 +31,8 @@
 		<modifier visible="0">
 			<effects>
 				<armor set="2"/>
+				<foodUpkeep base="1.0"/> <!-- %foodUpkeep base tier=4 factor=1 -->
+				<foodCost base="20.0"/> <!-- %foodCost base tier=4 factor=1 -->
 				<hitpointsMax set="2.5"/>
 				<meleeAccuracy set="8"/>
 				<meleeArmorPenetration set="0.0"/>

@@ -31,6 +31,8 @@
 		<modifier visible="0">
 			<effects>
 				<armor set="5"/>
+				<foodUpkeep base="1.5"/> <!-- %foodUpkeep base tier=5 factor=1 -->
+				<foodCost base="15.0"/> <!-- %foodCost base tier=5 factor=0.5 -->
 				<hitpointsMax set="5.0"/>
 				<meleeAccuracy set="10"/>
 				<meleeArmorPenetration set="2.0"/>
@@ -38,6 +40,7 @@
 				<meleeDamage set="4"/>
 				<moraleMax set="8"/>
 				<movementMax set="3"/>
+				<oreCost base="15.0"/> <!-- %oreCost base tier=5 factor=0.5 -->
 				<productionCost set="30"/>
 			</effects>
 		</modifier>
