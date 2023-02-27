@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit icon="Units/Neutral/Horror">
+	<model>
+		<unit mesh="Units/Neutral/Horror"
+				material="Units/Neutral/Horror"
+				scale="1.0 1.0 1.0"
+				idleAnimation="Units/Neutral/HorrorIdle"
+				idleAnimationCount="2"
+				idleContinuously="1"
+				normalWeight="0.1"
+				bloodBone="bip01 pelvis"
+				walker="1"/>
+	</model>
+	<group size="8" rowSize="3" memberDeltaX="80" memberDeltaY="64"/>
+	<weapons>
+		<weapon name="CloseCombatWeapon" slotName="CloseCombatWeapon">
+			<model>
+				<weapon fireInterval="3"
+						fireSoundCount="0"/>
+			</model>
+		</weapon>
+		<weapon name="HellBreath" slotName="HellBreath" enabled="0">
+			<model>
+				<flamerWeapon muzzleBone="bone_tongue2"/>
+			</model>		
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor set="0"/>
+				<hitpointsMax set="2.5"/>
+				<meleeAccuracy set="8"/>
+				<meleeArmorPenetration set="4.0"/>
+				<meleeAttacks set="1"/>
+				<meleeDamage set="2.5"/>
+				<moraleMax set="6"/>
+				<movementMax set="3"/>
+				<productionCost set="42.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<actions>
+		<attack>
+			<model>
+				<action chargeAnimation="Units/Neutral/HorrorMove"
+						meleeAnimation="Units/Neutral/HorrorAttack1"
+						meleeBeginSwing="0.0"
+						meleeEndSwing="3.0"
+						meleeDefenseAnimation="Units/Neutral/HorrorAttack0"
+						meleeDefenseBeginSwing="0.0"
+						meleeDefenseEndSwing="2.0"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Neutral/HorrorDie"
+						animationCount="1"/>
+			</model>
+		</die>
+		<move>
+			<model>
+				<action animation="Units/Neutral/HorrorMove"/>
+			</model>		
+		</move>
+		<flameBreath cooldown="3"
+				psychicPower="1"
+				weaponSlotName="HellBreath">
+			<model>
+				<action	animation="Units/Neutral/HorrorAbility"
+						beginFire="0.0"
+						endFire="3"/>
+			</model>				
+		</flameBreath>
+	</actions>
+	<traits>
+		<trait name="Daemon"/>
+		<trait name="Psyker"/>
+	</traits>
+</unit>

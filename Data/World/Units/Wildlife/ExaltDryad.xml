@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit icon="Units/Neutral/ExaltDryad">
+	<responses>
+		<action name="DryadShield" sound="Units/Neutral/ExaltDryad" soundCount="2"/>
+		<action name="RejuvenateHealth" sound="Units/Neutral/ExaltDryad" soundCount="2"/>
+		<action name="SpiritLightning" sound="Units/Neutral/ExaltDryad" soundCount="2"/>
+		<action name="die" sound="Units/Neutral/ExaltDryad" soundCount="2"/>
+		<attack sound="Units/Neutral/ExaltDryad" soundCount="2"/>
+		<move sound="Units/Neutral/ExaltDryad" soundCount="2"/>
+		<select sound="Units/Neutral/ExaltDryad" soundCount="2"/>
+	</responses>
+	<model>
+		<unit mesh="Units/Neutral/ExaltDryad"
+				material="Units/Neutral/ExaltDryad"
+				scale="2.0 2.0 2.0"
+				idleAnimation="Units/Neutral/ExaltDryadIdle"
+				idleAnimationCount="2"
+				idleContinuously="1"
+				normalWeight="0.1"
+				bloodBone="mixamorig:Hips"
+				walker="1"/>
+	</model>
+	<group size="2" memberDeltaX="64" memberDeltaY="64"/>
+	<weapons>
+		<weapon name="CloseCombatWeapon" slotName="CloseCombatWeapon">
+			<model>
+				<weapon fireInterval="0.5"
+						fireSoundCount="0"/>
+			</model>
+		</weapon>
+		<weapon name="SpiritLightning" slotName="SpiritLightning" enabled="0">
+			<model>
+				<beamWeapon muzzleBone="mixamorig:RightHand"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor set="3"/>
+				<hitpointsMax set="6"/>
+				<meleeAccuracy set="10"/>
+				<meleeArmorPenetration set="2.0"/>
+				<meleeAttacks set="1"/>
+				<meleeDamage set="6"/>
+				<moraleMax set="8"/>
+				<movementMax set="3"/>
+				<productionCost set="40"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<actions>
+		<attack>
+			<model>
+				<action chargeAnimation="Units/Neutral/ExaltDryadMove"
+						meleeAnimation="Units/Neutral/ExaltDryadMelee"
+						meleeBeginSwing="0.0"
+						meleeEndSwing="1.0"
+						meleeDefenseAnimation="Units/Neutral/ExaltDryadAttack"
+						meleeDefenseBeginSwing="0.0"
+						meleeDefenseEndSwing="1.0"
+						/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Neutral/ExaltDryadDie"
+						animationCount="1"
+						/>
+			</model>
+		</die>
+		<move>
+			<model>
+				<action animation="Units/Neutral/ExaltDryadMove"
+						/>
+			</model>		
+		</move>
+		<defensiveProtocols cooldown="3"
+				levelUpPriority="0.15"
+				name="DryadShield"
+				rank="1"
+				rankMax="1"
+				requiredActionPoints="0"
+				consumedActionPoints="0" consumedMovement="0">
+			<model>
+				<action animation="Units/Neutral/ExaltDryadArmsWideCast"
+						sound="Actions/ArmourUp"/>
+			</model>		
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit" radius="1">
+							<modifiers>
+								<modifier>
+									<conditions>
+										<unit>
+											<allied/>
+										</unit>
+									</conditions>
+									<effects>
+										<addTrait duration="1" name="DryadShield"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</defensiveProtocols>
+		<narthecium cooldown="2" name="RejuvenateHealth">
+			<model>
+				<action animation="Units/Neutral/ExaltDryadArmUpCast"
+						sound="Actions/Heal"/>
+			</model>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<unit>
+							<allied/>
+							<damaged/>
+						</unit>
+					</conditions>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<hitpoints add="8" name="RejuvenateHealth"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</narthecium>
+		<transdimensionalThunderbolt weaponSlotName="SpiritLightning" cooldown="2">
+			<model>
+				<action animation="Units/Neutral/ExaltDryadArmForwardCast"
+						beginFire="0.5"
+						endFire="1.2"/>
+			</model>
+		</transdimensionalThunderbolt>
+	</actions>
+	<traits>
+		<trait name="ForestStealth"/>
+		<trait name="Psyker"/>
+	</traits>
+</unit>

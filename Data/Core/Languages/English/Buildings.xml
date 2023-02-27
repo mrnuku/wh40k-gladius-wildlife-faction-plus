@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<entry name="Wildlife/BotanicalHive" value="Botanical Hive"/>
+	<entry name="Wildlife/BotanicalHiveDescription" value="Building that cultivates flora and fauna as well as increases population limit and generates research."/>
+	<entry name="Wildlife/BotanicalHiveFlavor" value="The Botanical Hive is a bastion of biodiversity that cultivates a variety of plants and insects to bolster your forces on the battlefield. From swift and agile arthropods to towering and resilient flora, the units produced here offer a wide range of strategic options for your faction."/>
+
+	<entry name="Wildlife/StygianStronghold" value="Stygian Stronghold"/>
+	<entry name="Wildlife/StygianStrongholdDescription" value="Building that produces demons and special ops units as well as generates influence and increases loyalty."/>
+	<entry name="Wildlife/StygianStrongholdFlavor" value="The Stygian Stronghold is a sinister structure where the most elite and ruthless special ops units are trained, equipped with the most advanced and deadly technology, and led by commanders who possess dark powers beyond mortal comprehension. These demonic warriors are highly skilled in infiltration, sabotage, assassination, and other covert operations, and they strike fear into the hearts of their enemies with their fearsome appearance and relentless ferocity."/>
+</language>

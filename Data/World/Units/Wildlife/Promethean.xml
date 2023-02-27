@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit icon="Units/Neutral/Promethean">
+	<responses>
+		<action name="LivingPrometheanIncubator" sound="Units/Neutral/PrometheanYoung" soundCount="2"/>
+		<action name="die" sound="Units/Neutral/Promethean" soundCount="2"/>
+		<attack sound="Units/Neutral/Promethean" soundCount="2"/>
+		<move sound="Units/Neutral/Promethean" soundCount="2"/>
+		<select sound="Units/Neutral/Promethean" soundCount="2"/>
+	</responses>
+	<model>
+		<unit mesh="Units/Neutral/Promethean"
+				material="Units/Neutral/Promethean"
+				scale="1.0 1.0 1.0"
+				idleAnimation="Units/Neutral/PrometheanIdle"
+				idleAnimationCount="2"
+				idleContinuously="1"
+				normalWeight="0.1"
+				bloodBone="BN_Bip01_Pelvis"
+				walker="1"/>
+	</model>
+	<group size="1" rowSize="3" memberDeltaX="80" memberDeltaY="64"/>
+	<weapons>
+		<weapon name="CloseCombatWeapon" slotName="CloseCombatWeapon">
+			<model>
+				<weapon fireInterval="0.5"
+						fireSoundCount="0"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor set="9"/>
+				<hitpointsMax set="12.0"/>
+				<meleeAccuracy set="5"/>
+				<meleeArmorPenetration set="3.0"/>
+				<meleeAttacks set="3"/>
+				<meleeDamage set="3"/>
+				<moraleMax set="6"/>
+				<movementMax set="3"/>
+				<productionCost set="42.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<actions>
+		<attack>
+			<model>
+				<action chargeAnimation="Units/Neutral/PrometheanMove"
+					    meleeAnimation="Units/Neutral/PrometheanAttack"
+						meleeBeginSwing="0.0"
+						meleeEndSwing="0.71"
+						meleeDefenseAnimation="Units/Neutral/PrometheanAttack"
+						meleeDefenseBeginSwing="0.0"
+						meleeDefenseEndSwing="0.71"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Neutral/PrometheanDie"
+						animationCount="1"/>
+			</model>
+		</die>
+		<move>
+			<model>
+				<action animation="Units/Neutral/PrometheanMove"/>
+			</model>		
+		</move>
+		<livingIncubator cooldown="35"
+				name="LivingPrometheanIncubator"
+				rank="1"
+				rankMax="1">
+			<model>
+				<action animation="Units/Neutral/PrometheanSpawnYoung"/>
+			</model>
+			<modifiers>
+				<modifier visible="0">
+					<conditions>
+						<unit>
+							<trait name="Tyranids/MassIncubation"/>
+						</unit>
+					</conditions>
+					<effects>
+						<cooldown add="-2"/>
+					</effects>
+				</modifier>
+			</modifiers>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<tile>
+							<land/>
+							<noUnit/>
+						</tile>
+					</conditions>
+					<areas>
+						<area affects="Tile">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addUnit name="Wildlife/PrometheanYoung" consumedAction="0" consumedMovement="0" levelMin="0" levelMax="6"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</livingIncubator>
+	</actions>
+	<traits>
+		<trait name="MonstrousCreature"/>
+		<trait name="Rending"/>
+		<trait name="Rampage"/>
+		<trait name="Fearless"/>
+	</traits>
+</unit>

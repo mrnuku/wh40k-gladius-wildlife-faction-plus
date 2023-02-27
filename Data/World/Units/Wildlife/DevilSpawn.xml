@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit spawnDistanceMin="6" icon="Units/Neutral/DevilSpawn">
+	<responses>
+		<action name="PoisonSting" sound="Units/Neutral/DevilSpawn" soundCount="2"/>
+		<action name="die" sound="Units/Neutral/DevilSpawn" soundCount="2"/>
+		<attack sound="Units/Neutral/DevilSpawn" soundCount="2"/>
+		<move sound="Units/Neutral/DevilSpawn" soundCount="2"/>
+		<select sound="Units/Neutral/DevilSpawn" soundCount="2"/>
+	</responses>
+	<model>
+		<unit mesh="Units/Neutral/DevilSpawn"
+				material="Units/Neutral/DevilSpawn"
+				scale="0.5 0.5 0.5"
+				idleAnimation="Units/Neutral/DevilSpawnIdle"
+				idleAnimationCount="1"
+				idleContinuously="1"
+				normalWeight="0.1"
+				bloodBone="jt_Head_C"
+				walker="1"/>
+	</model>
+	<group size="5" rowSize="3" memberDeltaX="80" memberDeltaY="64"/>
+	<weapons>
+		<weapon name="CloseCombatWeapon" slotName="CloseCombatWeapon">
+			<model>
+				<weapon fireInterval="0.5"
+						fireSoundCount="0"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor set="2"/>
+				<hitpointsMax set="2.5"/>
+				<meleeAccuracy set="8"/>
+				<meleeArmorPenetration set="0.0"/>
+				<meleeAttacks set="1"/>
+				<meleeDamage set="3"/>
+				<moraleMax set="4"/>
+				<movementMax set="3"/>
+				<productionCost set="24.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<actions>
+		<attack>
+			<model>
+				<action chargeAnimation="Units/Neutral/DevilSpawnMove"
+					    meleeAnimation="Units/Neutral/DevilSpawnAttackClaws"
+						meleeBeginSwing="0.0"
+						meleeEndSwing="1.0"
+						meleeDefenseAnimation="Units/Neutral/DevilSpawnAttackClaws"
+						meleeDefenseBeginSwing="0.0"
+						meleeDefenseEndSwing="1.0"
+						meleeSound="Units/Neutral/CatachanDevilAttack"
+						meleeSoundCount="2"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Neutral/DevilSpawnDie"
+						animationCount="1"/>
+			</model>
+		</die>
+		<move>
+			<model>
+				<action animation="Units/Neutral/DevilSpawnMove"/>
+			</model>		
+		</move>
+		<enfeeble cooldown="3"
+				psychicPower="1"
+				name="PoisonSting">
+			<model>
+				<action animation="Units/Neutral/DevilSpawnAttackTail"/>
+			</model>
+			<beginTargets>
+				<target rangeMax="1">
+					<conditions>
+						<unit>
+							<enemy/>
+						</unit>
+					</conditions>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="3" name="DevilStung"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</enfeeble>
+	</actions>
+	<traits>
+		<trait name="Fleet"/>
+		<trait name="Stealth"/>
+	</traits>
+</unit>

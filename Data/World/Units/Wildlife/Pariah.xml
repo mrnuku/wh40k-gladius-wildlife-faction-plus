@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit spawnCountMax="1" icon="Units/Neutral/Pariah">
+	<responses>
+		<action name="UseWeapon/SkyFall" sound="Units/Neutral/Pariah" soundCount="4"/>
+		<action name="UseWeapon/SeismicVoid" sound="Units/Neutral/Pariah" soundCount="4"/> 
+		<action name="HorrificVisions" sound="Units/Neutral/Pariah" soundCount="4"/>
+		<action name="die" sound="Units/Neutral/Pariah" soundCount="4"/>
+		<attack sound="Units/Neutral/Pariah" soundCount="4"/>
+		<move sound="Units/Neutral/Pariah" soundCount="4"/>
+		<select sound="Units/Neutral/Pariah" soundCount="4"/>
+	</responses>
+	<model>
+		<unit mesh="Units/Neutral/Pariah"
+				material="Units/Neutral/Pariah"
+				scale="1.0 1.0 1.0"
+				idleAnimation="Units/Neutral/PariahIdle"
+				idleAnimationCount="3"
+				idleContinuously="1"
+				normalWeight="0.1"
+				bloodBone="mixamorig:Hips"
+				walker="1"/>
+	</model>
+	<group size="1"/>
+	<weapons>
+		<weapon name="SkyFall" slotName="SkyFall" enabled="0"/>
+		<weapon name="SeismicVoid" slotName="SeismicVoid" enabled="0"/>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor set="6"/>
+				<hitpointsMax set="6.0"/>
+				<meleeAccuracy set="8"/>
+				<meleeArmorPenetration set="0.0"/>
+				<meleeAttacks set="1"/>
+				<meleeDamage set="1"/>
+				<moraleMax set="6"/>
+				<movementMax set="3"/>
+				<productionCost set="64.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<actions>
+		<attack>
+			<model>
+				<action meleeDefenseAnimation="Units/Neutral/PariahHit"
+						meleeDefenseBeginSwing="0.0"
+						meleeDefenseEndSwing="1.1"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Neutral/PariahDie"
+						animationCount="1"/>
+			</model>
+		</die>
+		<move>
+			<model>
+				<action animation="Units/Neutral/PariahMove"/>
+			</model>		
+		</move>
+		<genericUnitAbility name="ShadowOfTheWarp" passive="1">
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Tile" radius="1" excludeRadius="0">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait name="Tyranids/ShadowInTheWarp"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</genericUnitAbility>
+		<genericUnitAbility name="Necrons/WrithingWorldscape"
+				passive="1">
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Tile" radius="1" excludeRadius="0">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait name="Necrons/WrithingWorldscape"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</genericUnitAbility>
+		<seismicAssault weaponSlotName="SeismicVoid" cooldown="3">
+			<model>
+				<action animation="Units/Neutral/PariahArmsUpForwardCast"
+						sound="Actions/SeismicAssault"/>
+			</model>
+		</seismicAssault>
+		<skyOfFallingStars weaponSlotName="SkyFall" cooldown="3">
+			<model>
+				<action animation="Units/Neutral/PariahArmsUpDownCast"
+						sound="Actions/SkyOfFallingStars"/>
+			</model>
+		</skyOfFallingStars>
+		<theHorror cooldown="3"
+				name="HorrificVisions"
+				psychicPower="1">
+			<model>
+				<action animation="Units/Neutral/PariahArmsBackForwardCast"
+						sound="Actions/HiveMindDebuff"/>
+			</model>
+			<beginTargets>
+				<target rangeMax="2">
+					<conditions>
+						<unit>
+							<enemy/>
+							<noTrait name="Fearless"/>
+							<noTrait name="Fortification"/>
+							<noTrait name="Zealot"/>
+						</unit>
+					</conditions>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="2" name="Pinned"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</theHorror>
+	</actions>
+	<traits>
+		<trait name="Psyker"/>
+		<trait name="Fearless"/>
+		<trait name="Smash"/>
+		<trait name="Hero"/>
+	</traits>
+</unit>

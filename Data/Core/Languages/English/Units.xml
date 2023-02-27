@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<entry name="Wildlife/DevilSpawn" value="<string name='Units/Neutral/DevilSpawn'/>"/>
+	<entry name="Wildlife/DevilSpawnDescription" value="<string name='Units/Neutral/DevilSpawnDescription'/>"/>
+	<entry name="Wildlife/DevilSpawnFlavor" value="<string name='Units/Neutral/DevilSpawnFlavor'/>"/>
+
+	<entry name="Wildlife/GiantAudrey" value="<string name='Units/Neutral/GiantAudrey'/>"/>
+	<entry name="Wildlife/GiantAudreyDescription" value="<string name='Units/Neutral/GiantAudreyDescription'/>"/>
+	<entry name="Wildlife/GiantAudreyFlavor" value="<string name='Units/Neutral/GiantAudreyFlavor'/>"/>
+
+	<entry name="Wildlife/Mutant" value="<string name='Units/Neutral/Mutant'/>"/>
+	<entry name="Wildlife/MutantDescription" value="<string name='Units/Neutral/MutantDescription'/>"/>
+	<entry name="Wildlife/MutantFlavor" value="<string name='Units/Neutral/MutantFlavor'/>"/>
+
+	<entry name="Wildlife/Promethean" value="<string name='Units/Neutral/Promethean'/>"/>
+	<entry name="Wildlife/PrometheanDescription" value="<string name='Units/Neutral/PrometheanDescription'/>"/>
+	<entry name="Wildlife/PrometheanFlavor" value="<string name='Units/Neutral/PrometheanFlavor'/>"/>
+
+	<entry name="Wildlife/PrometheanYoung" value="<string name='Units/Neutral/PrometheanYoung'/>"/>
+	<entry name="Wildlife/PrometheanYoungDescription" value="<string name='Units/Neutral/PrometheanYoungDescription'/>"/>
+	<entry name="Wildlife/PrometheanYoungFlavor" value="<string name='Units/Neutral/PrometheanYoungFlavor'/>"/>
+
+	<entry name="Wildlife/ExaltDryad" value="<string name='Units/Neutral/ExaltDryad'/>"/>
+	<entry name="Wildlife/ExaltDryadDescription" value="<string name='Units/Neutral/ExaltDryadDescription'/>"/>
+	<entry name="Wildlife/ExaltDryadFlavor" value="<string name='Units/Neutral/ExaltDryadFlavor'/>"/>
+
+	<entry name="Wildlife/OctopodaFacientem" value="<string name='Units/Neutral/OctopodaFacientem'/>"/>
+	<entry name="Wildlife/OctopodaFacientemDescription" value="<string name='Units/Neutral/OctopodaFacientemDescription'/>"/>
+	<entry name="Wildlife/OctopodaFacientemFlavor" value="<string name='Units/Neutral/OctopodaFacientemFlavor'/>"/>
+
+	<entry name="Wildlife/Pariah" value="<string name='Units/Neutral/Pariah'/>"/>
+	<entry name="Wildlife/PariahDescription" value="<string name='Units/Neutral/PariahDescription'/>"/>
+	<entry name="Wildlife/PariahFlavor" value="<string name='Units/Neutral/PariahFlavor'/>"/>
+
+	<entry name="Wildlife/Horror" value="<string name='Units/Neutral/Horror'/>"/>
+	<entry name="Wildlife/HorrorDescription" value="<string name='Units/Neutral/HorrorDescription'/>"/>
+	<entry name="Wildlife/HorrorFlavor" value="<string name='Units/Neutral/HorrorFlavor'/>"/>
+
+	<entry name="Wildlife/MagnaDeamonusPyros" value="<string name='Units/Neutral/MagnaDeamonusPyros'/>"/>
+	<entry name="Wildlife/MagnaDeamonusPyrosDescription" value="<string name='Units/Neutral/MagnaDeamonusPyrosDescription'/>"/>
+	<entry name="Wildlife/MagnaDeamonusPyrosFlavor" value="<string name='Units/Neutral/MagnaDeamonusPyrosFlavor'/>"/>
+</language>

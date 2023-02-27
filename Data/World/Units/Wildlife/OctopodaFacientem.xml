@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit icon="Units/Neutral/OctopodaFacientem">
+	<responses>
+		<action name="UseWeapon/ParasiticalBreath" sound="Units/Neutral/OctopodaFacientem" soundCount="3"/>
+		<action name="die" sound="Units/Neutral/OctopodaFacientemDie" soundCount="1"/>
+		<attack sound="Units/Neutral/OctopodaFacientem" soundCount="3"/>
+		<move sound="Units/Neutral/OctopodaFacientem" soundCount="3"/>
+		<select sound="Units/Neutral/OctopodaFacientem" soundCount="3"/>
+	</responses>
+	<model>
+		<unit mesh="Units/Neutral/OctopodaFacientem"
+				material="Units/Neutral/OctopodaFacientem"
+				scale="6.0 6.0 6.0"
+				idleAnimation="Units/Neutral/OctopodaFacientemIdle"
+				idleAnimationCount="3"
+				idleContinuously="1"
+				normalWeight="0.1"
+				bloodBone="mixamorig:Hips"
+				walker="1"/>
+	</model>
+	<group size="3" rowSize="3" memberDeltaX="80" memberDeltaY="64"/>
+	<weapons>
+		<weapon name="CloseCombatWeapon" slotName="CloseCombatWeapon">
+			<model>
+				<weapon fireInterval="0.5"
+						fireSoundCount="0"/>
+			</model>
+		</weapon>
+		<weapon name="ParasiticalBreath" slotName="ParasiticalBreath" enabled="0">
+			<model>
+				<flamerWeapon muzzleBone="mixamorig:Head"
+						effectFaceWeight="1"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor set="2"/>
+				<hitpointsMax set="2.0"/>
+				<meleeAccuracy set="8"/>
+				<meleeArmorPenetration set="1.0"/>
+				<meleeAttacks set="2"/>
+				<meleeDamage set="5"/>
+				<moraleMax set="8"/>
+				<movementMax set="3"/>
+				<productionCost set="48"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<actions>
+		<attack>
+			<model>
+				<action chargeAnimation="Units/Neutral/OctopodaFacientemMove"
+						meleeAnimation="Units/Neutral/OctopodaFacientemMelee"
+						meleeBeginSwing="0.0"
+						meleeEndSwing="1.0"
+						meleeDefenseAnimation="Units/Neutral/OctopodaFacientemMelee"
+						meleeDefenseBeginSwing="0.0"
+						meleeDefenseEndSwing="1.0"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Neutral/OctopodaFacientemDie"
+						animationCount="1"/>
+			</model>
+		</die>
+		<move>
+			<model>
+				<action animation="Units/Neutral/OctopodaFacientemMove"/>
+			</model>		
+		</move>
+		<useWeapon cooldown="4" weaponSlotName="ParasiticalBreath">
+			<model>
+				<action animation="Units/Neutral/OctopodaFacientemRoar"
+						beginFire="0.5" endFire="1.6"/>
+			</model>
+		</useWeapon>
+	</actions>
+	<traits>
+		<trait name="Poisoned" rank="1"/>
+		<trait name="Regeneration"/>
+		<trait name="Daemon"/>
+	</traits>
+</unit>

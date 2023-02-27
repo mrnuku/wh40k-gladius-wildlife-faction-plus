@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit icon="Units/Neutral/Mutant">
+	<responses>
+		<action name="DeathWail" sound="Units/Neutral/Mutant" soundCount="2"/>
+		<action name="die" sound="Units/Neutral/Mutant" soundCount="2"/>
+		<attack sound="Units/Neutral/Mutant" soundCount="2"/>
+		<move sound="Units/Neutral/Mutant" soundCount="2"/>
+		<select sound="Units/Neutral/Mutant" soundCount="2"/>
+	</responses>
+	<model>
+		<unit mesh="Units/Neutral/Mutant"
+				material="Units/Neutral/Mutant"
+				scale="1.0 1.0 1.0"
+				idleAnimation="Units/Neutral/MutantIdle"
+				idleAnimationCount="3"
+				idleContinuously="1"
+				normalWeight="0.1"
+				bloodBone="Mutant:Hips"
+				walker="1"/>
+	</model>
+	<group size="4" rowSize="3" memberDeltaX="80" memberDeltaY="64"/>
+	<weapons>
+		<weapon name="CloseCombatWeapon" slotName="CloseCombatWeapon">
+			<model>
+				<weapon fireInterval="0.5"
+						fireSoundCount="0"/>
+			</model>
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor set="5"/>
+				<hitpointsMax set="5.0"/>
+				<meleeAccuracy set="10"/>
+				<meleeArmorPenetration set="2.0"/>
+				<meleeAttacks set="1"/>
+				<meleeDamage set="4"/>
+				<moraleMax set="8"/>
+				<movementMax set="3"/>
+				<productionCost set="30"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<actions>
+		<attack>
+			<model>
+				<action chargeAnimation="Units/Neutral/MutantMove"
+						meleeAnimation="Units/Neutral/MutantAttack"
+						meleeBeginSwing="0.0"
+						meleeEndSwing="1.0"
+						meleeDefenseAnimation="Units/Neutral/MutantAttack"
+						meleeDefenseBeginSwing="0.0"
+						meleeDefenseEndSwing="1.0"
+						/>
+						<!-- MutantAttackJump -->
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Neutral/MutantDie"
+						animationCount="1"
+						/>
+			</model>
+		</die>
+		<move>
+			<model>
+				<action animation="Units/Neutral/MutantMove"
+						/>
+			</model>		
+		</move>
+		<psychicScream cooldown="5"
+				name="DeathWail"
+				rank="1"
+				rankMax="1">
+			<model>
+				<action animation="Units/Neutral/MutantAttackJump"
+						bone="Mutant:Hips"
+						beginFire="0.67"/>
+			</model>
+			<beginTargets>
+				<selfTarget>
+					<areas>
+						<area affects="Unit" radius="1" excludeRadius="0">
+							<modifiers>
+								<modifier>
+									<conditions>
+										<unit>
+											<enemy/>
+										</unit>
+									</conditions>
+									<effects>
+										<weaponDamage weapon="DeathWail"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</selfTarget>
+			</beginTargets>
+		</psychicScream>
+	</actions>
+	<traits>
+		<trait name="Rending"/>
+	</traits>
+</unit>

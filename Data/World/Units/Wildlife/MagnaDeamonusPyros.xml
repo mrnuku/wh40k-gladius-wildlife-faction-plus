@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unit spawnCountMax="1" icon="Units/Neutral/MagnaDeamonusPyros">
+	<model>
+		<unit mesh="Units/Neutral/MagnaDeamonusPyros"
+				material="Units/Neutral/MagnaDeamonusPyros"
+				scale="1.0 1.0 1.0"
+				idleAnimation="Units/Neutral/MagnaDeamonusPyrosIdle"
+				idleAnimationCount="1"
+				idleContinuously="1"
+				normalWeight="0.1"
+				bloodBone="Bip01 Head"
+				walker="1"/>
+	</model>
+	<group size="1" rowSize="3" memberDeltaX="80" memberDeltaY="64"/>
+	<weapons>
+		<weapon name="CloseCombatWeapon" slotName="CloseCombatWeapon">
+			<model>
+				<weapon fireInterval="0.5"
+						fireSoundCount="0"/>
+			</model>
+		</weapon>
+		<weapon name="HellBeam" slotName="HellBeam" enabled="0">
+			<model>
+				<beamWeapon muzzleBone="Bip01 Head"/>
+			</model>		
+		</weapon>
+	</weapons>
+	<modifiers>
+		<modifier visible="0">
+			<effects>
+				<armor set="8"/>
+				<hitpointsMax set="8.0"/>
+				<meleeAccuracy set="8"/>
+				<meleeArmorPenetration set="3.0"/>
+				<meleeAttacks set="3"/>
+				<meleeDamage set="3"/>
+				<moraleMax set="6"/>
+				<movementMax set="3"/>
+				<productionCost set="42.0"/>
+			</effects>
+		</modifier>
+	</modifiers>
+	<actions>
+		<attack>
+			<model>
+				<action chargeAnimation="Units/Neutral/MagnaDeamonusPyrosMove"
+					    meleeAnimation="Units/Neutral/MagnaDeamonusPyrosAttack"
+						meleeBeginSwing="0.0"
+						meleeEndSwing="2.0"
+						meleeDefenseAnimation="Units/Neutral/MagnaDeamonusPyrosAttack"
+						meleeDefenseBeginSwing="0.0"
+						meleeDefenseEndSwing="2.0"/>
+			</model>
+		</attack>
+		<die>
+			<model>
+				<action animation="Units/Neutral/MagnaDeamonusPyrosDie"
+						animationCount="1"/>
+			</model>
+		</die>
+		<move>
+			<model>
+				<action animation="Units/Neutral/MagnaDeamonusPyrosMove"/>
+			</model>		
+		</move>
+		<warpath cooldown="4"
+				name="DaemonPath"> <!-- growing axe icon -->
+			<model>
+				<action animation="Units/Neutral/MagnaDeamonusPyrosAbility"
+						sound="Actions/DrawSword"/>
+			</model>
+			<beginTargets>
+				<target rangeMax="2">
+					<conditions>
+						<unit>
+							<allied/>
+						</unit>
+					</conditions>
+					<areas>
+						<area affects="Unit">
+							<modifiers>
+								<modifier>
+									<effects>
+										<addTrait duration="3" name="DaemonPath"/>
+									</effects>
+								</modifier>
+							</modifiers>
+						</area>
+					</areas>
+				</target>
+			</beginTargets>
+		</warpath>
+		<moltenBeam cooldown="3"
+				levelUpPriority="0.15"
+				psychicPower="1"
+				rank="1"
+				rankMax="1"
+				weaponSlotName="HellBeam">
+			<model>
+				<action	animation="Units/Neutral/MagnaDeamonusPyrosAbility"
+						bone="Bip01 Head"
+						beginFire="0.0"
+						endFire="2.6"/>
+			</model>
+		</moltenBeam>
+	</actions>
+	<traits>
+		<trait name="MonstrousCreature"/>
+		<trait name="Psyker"/>
+		<trait name="Rending"/>
+		<trait name="Rampage"/>
+		<trait name="Stubborn"/>
+		<trait name="Daemon"/>
+	</traits>
+</unit>
