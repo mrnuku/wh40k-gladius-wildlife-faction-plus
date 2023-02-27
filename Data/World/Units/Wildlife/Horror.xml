@@ -80,5 +80,6 @@
 	<traits>
 		<trait name="Daemon"/>
 		<trait name="Psyker"/>
+		<trait name="EavyArmour" requiredUpgrade="Wildlife/ExtraInfantryArmour"/>
 	</traits>
 </unit>

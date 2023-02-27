@@ -100,5 +100,6 @@
 	<traits>
 		<trait name="Fleet"/>
 		<trait name="Stealth"/>
+		<trait name="EavyArmour" requiredUpgrade="Wildlife/ExtraInfantryArmour"/>
 	</traits>
 </unit>

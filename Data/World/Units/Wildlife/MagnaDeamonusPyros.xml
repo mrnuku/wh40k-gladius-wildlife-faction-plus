@@ -115,5 +115,6 @@
 		<trait name="Rampage"/>
 		<trait name="Stubborn"/>
 		<trait name="Daemon"/>
+		<trait name="EavyArmour" requiredUpgrade="Wildlife/ExtraInfantryArmour"/>
 	</traits>
 </unit>

@@ -147,5 +147,6 @@
 		<trait name="Fearless"/>
 		<trait name="Smash"/>
 		<trait name="Hero"/>
+		<trait name="EavyArmour" requiredUpgrade="Wildlife/ExtraInfantryArmour"/>
 	</traits>
 </unit>

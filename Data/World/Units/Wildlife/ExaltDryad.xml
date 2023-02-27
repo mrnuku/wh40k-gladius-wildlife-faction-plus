@@ -149,5 +149,6 @@
 	<traits>
 		<trait name="ForestStealth"/>
 		<trait name="Psyker"/>
+		<trait name="EavyArmour" requiredUpgrade="Wildlife/ExtraInfantryArmour"/>
 	</traits>
 </unit>

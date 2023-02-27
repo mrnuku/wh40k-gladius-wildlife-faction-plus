@@ -114,5 +114,6 @@
 		<trait name="Rending"/>
 		<trait name="Rampage"/>
 		<trait name="Fearless"/>
+		<trait name="EavyArmour" requiredUpgrade="Wildlife/ExtraInfantryArmour"/>
 	</traits>
 </unit>

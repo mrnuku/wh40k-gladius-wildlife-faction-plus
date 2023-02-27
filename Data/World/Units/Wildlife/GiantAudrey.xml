@@ -104,5 +104,6 @@
 		<trait name="Rampage"/>
 		<trait name="Fearless"/>
 		<trait name="Rage"/>
+		<trait name="EavyArmour" requiredUpgrade="Wildlife/ExtraInfantryArmour"/>
 	</traits>
 </unit>

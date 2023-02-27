@@ -89,5 +89,6 @@
 		<trait name="Fearless"/>
 		<trait name="Rampage"/>
 		<trait name="Swarms"/>
+		<trait name="EavyArmour" requiredUpgrade="Wildlife/ExtraInfantryArmour"/>
 	</traits>
 </unit>

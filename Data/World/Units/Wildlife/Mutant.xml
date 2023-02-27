@@ -105,5 +105,6 @@
 	</actions>
 	<traits>
 		<trait name="Rending"/>
+		<trait name="EavyArmour" requiredUpgrade="Wildlife/ExtraInfantryArmour"/>
 	</traits>
 </unit>

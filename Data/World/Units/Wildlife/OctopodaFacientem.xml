@@ -84,5 +84,6 @@
 		<trait name="Poisoned" rank="1"/>
 		<trait name="Regeneration"/>
 		<trait name="Daemon"/>
+		<trait name="EavyArmour" requiredUpgrade="Wildlife/ExtraInfantryArmour"/>
 	</traits>
 </unit>
